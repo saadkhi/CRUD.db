@@ -19,6 +19,30 @@
       overflow: hidden;
     }
 
+    /* Top Bar */
+    .top-bar {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+    }
+
+    .login-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      background-color: #10a37f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #0e8e6d;
+    }
+
     /* Sidebar */
     .sidebar {
       width: 260px;
@@ -70,6 +94,7 @@
       flex-direction: column;
       justify-content: space-between;
       background: #fff;
+      position: relative;
     }
 
     .chat-container {
@@ -162,6 +187,10 @@
   </style>
 </head>
 <body>
+  <div class="top-bar">
+    <a href="CRUD_proj/CRUD_app/templates/website/login.html" class="login-btn">Login</a>
+  </div>
+
   <div class="sidebar">
     <h2>ChatBot</h2>
     <button>+ New Chat</button>
