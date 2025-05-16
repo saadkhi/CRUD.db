@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot UI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      background: #f0f0f0;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background-color: #202123;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .sidebar button,
+    .sidebar input {
+      margin: 0.5rem 0;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #343541;
+      color: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .sidebar input {
+      background-color: #3f404c;
+    }
+
+    .sidebar button:hover {
+      background-color: #444654;
+    }
+
+    .sidebar .plan-button {
+      margin-top: auto;
+      background-color: #10a37f;
+    }
+
+    .sidebar .plan-button:hover {
+      background-color: #0e8e6d;
+    }
+
+    /* Main Chat Area */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #fff;
+    }
+
+    .chat-container {
+      padding: 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .chat-message {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .chat-message .text {
+      background-color: #ececec;
+      padding: 1rem;
+      border-radius: 12px;
+      max-width: 60%;
+    }
+
+    .chat-message.user {
+      justify-content: flex-end;
+    }
+
+    .chat-message.user .text {
+      background-color: #d1f4e0;
+    }
+
+    .chat-message.user .avatar {
+      margin-left: 0.75rem;
+      position: relative;
+    }
+
+    .chat-message .avatar img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .chat-message .avatar .tooltip {
+      display: none;
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-size: 0.75rem;
+    }
+
+    .chat-message .avatar:hover .tooltip {
+      display: block;
+    }
+
+    /* Footer */
+    .chat-input {
+      padding: 1rem;
+      background-color: #fafafa;
+      border-top: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .chat-input button {
+      padding: 0.8rem 1.2rem;
+      margin-left: 1rem;
+      border: none;
+      background-color: #10a37f;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .chat-input button:hover {
+      background-color: #0e8e6d;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>ChatBot</h2>
+    <button>+ New Chat</button>
+    <input type="text" placeholder="Search history..." />
+    <button>Conversation 1</button>
+    <button>Conversation 2</button>
+    <button>Conversation 3</button>
+    <button class="plan-button">Upgrade Plan</button>
+  </div>
+
+  <div class="main">
+    <div class="chat-container">
+      <div class="chat-message">
+        <div class="text">Hello! How can I help you today?</div>
+      </div>
+
+      <div class="chat-message user">
+        <div class="text">What's the weather like?</div>
+        <div class="avatar">
+          <img src="https://i.pravatar.cc/36" alt="User Avatar" />
+          <div class="tooltip">John Doe</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" placeholder="Type your message..." />
+      <button>Send</button>
+    </div>
+  </div>
+</body>
+</html>

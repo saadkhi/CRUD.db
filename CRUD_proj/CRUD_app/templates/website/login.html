@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f7f7f8;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .oauth-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .oauth-buttons button {
+      padding: 0.7rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: background 0.2s ease;
+    }
+
+    .oauth-google {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+    }
+
+    .oauth-google:hover {
+      background-color: #f1f1f1;
+    }
+
+    .oauth-github {
+      background-color: #24292e;
+      color: white;
+    }
+
+    .oauth-github:hover {
+      background-color: #1b1f23;
+    }
+
+    .oauth-huggingface {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    .oauth-huggingface:hover {
+      background-color: #e6b800;
+    }
+
+    .oauth-buttons img {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login to Your Account</h2>
+    <form>
+      <input type="text" placeholder="Username or Email" required />
+      <input type="password" placeholder="Password" required />
+    </form>
+
+    <div class="oauth-buttons">
+      <button class="oauth-google">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google" />
+        Login with Gmail
+      </button>
+      <button class="oauth-github">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+        Login with GitHub
+      </button>
+      <button class="oauth-huggingface">
+        <img src="https://huggingface.co/front/assets/huggingface_logo.svg" alt="Hugging Face" />
+        Login with Hugging Face
+      </button>
+    </div>
+  </div>
+</body>
+</html>
