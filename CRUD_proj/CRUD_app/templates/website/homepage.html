@@ -59,7 +59,8 @@
     }
 
     .sidebar button,
-    .sidebar input {
+    .sidebar input,
+    .sidebar a.code-button {
       margin: 0.5rem 0;
       padding: 0.6rem;
       border: none;
@@ -68,13 +69,17 @@
       color: white;
       cursor: pointer;
       font-size: 0.9rem;
+      text-decoration: none;
+      text-align: center;
+      display: block;
     }
 
     .sidebar input {
       background-color: #3f404c;
     }
 
-    .sidebar button:hover {
+    .sidebar button:hover,
+    .sidebar a.code-button:hover {
       background-color: #444654;
     }
 
@@ -188,7 +193,7 @@
 </head>
 <body>
   <div class="top-bar">
-    <a href="login.html" class="login-btn"> Login </a>
+    <a href="login.html" class="login-btn">Login</a>
   </div>
 
   <div class="sidebar">
@@ -199,6 +204,7 @@
     <button>Conversation 2</button>
     <button>Conversation 3</button>
     <button class="plan-button">Upgrade Plan</button>
+    <a href="https://github.com/saadkhi/CRUD.db" target="_blank" class="code-button">Dev can colabrate</a>
   </div>
 
   <div class="main">
